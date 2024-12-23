@@ -1,11 +1,8 @@
 <template>
-Hello! {{ counter }}
+    <div>Index</div>
 </template>
 
+
 <script setup>
-    import {ref} from 'vue';
-
-    const counter = ref(0);
-
-    setInterval(() => counter.value++,1000)
+import MainLayout from '../../Layouts/MainLayout.vue';
 </script>

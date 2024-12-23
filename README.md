@@ -7,5 +7,14 @@
 Advanced SPAs with Vue, Inertia, Laravel and Tailwind CSS.
 </p>
 
+[Laravel] (https://laravel.com/docs/11.x)
+
+[Inertia] (https://inertiajs.com/)
+
+[Vue] (https://vuejs.org/)   (https://v3.ru.vuejs.org/)
+
+
+[TailwindCSS] (https://tailwindcss.com/)
+
 ####  my working repo
 
