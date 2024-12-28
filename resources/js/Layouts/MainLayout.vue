@@ -1,9 +1,11 @@
 <template>
     <Link href="/">Main</Link>&nbsp;
     <Link href="/hello">Show</Link>
+    Current timer is {{ timer  }} <hr/>
  <!-- eslint-disable-next-line vue/html-self-closing -->
     <slot></slot>
-    Current timer is {{ timer  }}
+
+
 </template>
 <script setup>
 import { Link } from '@inertiajs/vue3'
