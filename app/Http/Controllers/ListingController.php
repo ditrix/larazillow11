@@ -12,10 +12,13 @@ class ListingController extends Controller
      */
     public function index()
     {
-        return inertia('Listing/Index',
-        [
-            'listings' => Listing::all()
-        ]
+
+        return inertia(
+            'Listing/Index',
+            [
+
+                'listings' => Listing::all()
+            ]
         );
     }
 
@@ -24,7 +27,7 @@ class ListingController extends Controller
      */
     public function create()
     {
-        //
+        return inertia('Listing/Create');
     }
 
     /**
@@ -32,7 +35,17 @@ class ListingController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Listing::create($request->validate([
+            'beds'  => 'required|integer|min:1|max:10',
+            'baths' => 'required|integer|min:1|max:10',
+            'area' => 'required|integer|min:10|max:100',
+            'city' => 'required|string',
+            'code' => 'required|integer',
+            'street' => 'required|string',
+            'street_nr' => 'required|string',
+            'price' => 'required|integer|min:0',
+        ]));
+        return redirect()->route('listing.index')->with('success', 'Listing created');
     }
 
     /**
@@ -40,7 +53,8 @@ class ListingController extends Controller
      */
     public function show(Listing $listing)
     {
-        return inertia('Listing/Show',
+        return inertia(
+            'Listing/Show',
             [
                 'listing' => $listing
             ]
