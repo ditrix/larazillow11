@@ -1,6 +1,6 @@
 <template>
-    <Link href="/">Main</Link>&nbsp;
-    <Link href="/hello">Show</Link>
+    <Link href="/listing">Listing</Link>&nbsp;
+    <Link href="/listing/create">New listing</Link>
 
     <div v-if="page.props.flash.success" class="success">
     {{page.props.flash.success}}
@@ -15,12 +15,15 @@ import { Link, usePage } from '@inertiajs/vue3'
 
 const page = usePage()
 
-console.log(page.props.flash.success)
+//console.log(page.props.flash.success)
 
 </script>
 <style scoped>
 .success {
     background-color: green;
-    color: aliceblue;
+    color: lightgray;
+    font-size: small;
+    padding: 0.3rem 1rem;
 }
+
 </style>
