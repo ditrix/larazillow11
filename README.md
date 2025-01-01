@@ -16,8 +16,16 @@ Advanced SPAs with Vue, Inertia, Laravel and Tailwind CSS.
 
 [TailwindCSS] (https://tailwindcss.com/)
 
-####  my working repo
+#### using
 
+[tighten/ziggy]  (https://github.com/tighten/ziggy)
+
+[laravel-debugbar]  (https://github.com/barryvdh/laravel-debugbar)
+
+[laravel-ide-helper] (https://github.com/barryvdh/laravel-ide-helper)
+
+
+####  my working repo
 
 
 
@@ -77,3 +85,4 @@ export default [
   }
 }
 ```
+
