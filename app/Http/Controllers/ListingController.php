@@ -43,7 +43,7 @@ class ListingController extends Controller
             'code' => 'required|integer',
             'street' => 'required|string',
             'street_nr' => 'required|string',
-            'price' => 'required|integer|min:0',
+            'price' => 'required|integer|min:0|max:1500',
         ]));
         return redirect()->route('listing.index')
             ->with('success', 'Listing created');

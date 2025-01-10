@@ -14,6 +14,7 @@ class IndexController extends Controller
 
     public function show()
     {
-        return inertia('Index/Show',['message' => 'hello from Laravel']);
+
+        return inertia('Index/Show', ['message' => 'Hello from Ditrix ']);
     }
 }

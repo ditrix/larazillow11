@@ -18,7 +18,7 @@ Advanced SPAs with Vue, Inertia, Laravel and Tailwind CSS.
 
 #### using
 
-[tighten/ziggy]  (https://github.com/tighten/ziggy)
+[tighten/ziggy]  (https://github.com/tighten/ziggy)   route(...) для *.vue
 
 [laravel-debugbar]  (https://github.com/barryvdh/laravel-debugbar)
 
