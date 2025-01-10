@@ -1,5 +1,5 @@
 <template>
-<span>{{ listing.street }}  {{ listing.street_nr }}, ${{ listing.price}}</span>
+<span>{{ listing.street }}  {{ listing.street_nr }}</span>
 </template>
 <script setup>
 
