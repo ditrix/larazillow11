@@ -38,12 +38,12 @@ class ListingController extends Controller
         Listing::create($request->validate([
             'beds'  => 'required|integer|min:1|max:10',
             'baths' => 'required|integer|min:1|max:10',
-            'area' => 'required|integer|min:10|max:100',
+            'area' => 'required|integer|min:10|max:500',
             'city' => 'required|string',
             'code' => 'required|integer',
             'street' => 'required|string',
             'street_nr' => 'required|string',
-            'price' => 'required|integer|min:0|max:1500',
+            'price' => 'required|integer|min:0|max:5000',
         ]));
         return redirect()->route('listing.index')
             ->with('success', 'Listing created');
@@ -83,12 +83,12 @@ class ListingController extends Controller
         $listing->update($request->validate([
             'beds'  => 'required|integer|min:1|max:10',
             'baths' => 'required|integer|min:1|max:10',
-            'area' => 'required|integer|min:10|max:100',
+            'area' => 'required|integer|min:10|max:500',
             'city' => 'required|string',
             'code' => 'required|integer',
             'street' => 'required|string',
-            'street_nr' => 'required|string',
-            'price' => 'required|integer|min:0',
+            'street_nr' => 'required',
+            'price' => 'required|integer|min:0|max:1000000',
         ]));
         return redirect()->route('listing.index')
             ->with('success', 'Listing updated');
