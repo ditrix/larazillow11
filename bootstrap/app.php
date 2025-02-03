@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\Authenticate;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -15,7 +16,14 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->web(append: [
             HandleInertiaRequests::class,
+            Authenticate::class,
         ]);
+        /* отключаем контроль за токеном (чтобы на протух то 419)  для logout
+
+        */
+        $middleware->validateCsrfTokens(except: [
+            '/logout'
+            ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //

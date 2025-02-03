@@ -3,7 +3,7 @@
         <div>
             <div class="flex gap-1 items-center">
                 <Price :price="listing.price" class="text-2xl font-bold"/>
-                <div  class="text-xs text-gray-800">
+                <div  class="text-xs text-gray-500">
                 <Price :price="monthlyPayment"/>pm
                 </div>
             </div>

@@ -9,6 +9,8 @@ Advanced SPAs with Vue, Inertia, Laravel and Tailwind CSS.
 
 [Laravel] (https://laravel.com/docs/11.x)
 
+[Vite] (https://vite.dev/guide/)
+
 [Inertia] (https://inertiajs.com/)
 
 [Vue] (https://vuejs.org/)   (https://v3.ru.vuejs.org/)

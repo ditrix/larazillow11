@@ -4,9 +4,13 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Listing;
+use Auth;
 
 class ListingController extends Controller
 {
+
+
+
     /**
      * Display a listing of the resource.
      */
@@ -99,9 +103,14 @@ class ListingController extends Controller
      */
     public function destroy(Listing $listing)
     {
-        $listing->delete($listing->id);
+        if(Auth::user()) {
+            $listing->delete($listing->id);
 
-        return redirect()->back()
-            ->with('success', 'Deleted');
+            return redirect()->back()
+                ->with('success', 'Deleted');
+        } else {
+            return redirect()->route('login');
+        }
+
     }
 }

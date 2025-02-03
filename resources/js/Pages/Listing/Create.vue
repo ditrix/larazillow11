@@ -45,12 +45,19 @@
             <div>
                 <input class="btn-primary" type="submit" value="Create" />
             </div>
+            <div class="mt-2 text-center">
+                <Link :href="route('user-account.create')"
+                    class="text-sm text-gray-500"
+                >
+                    Have account?  Click to login page
+                </Link>
+            </div>
         </div>
     </form>
 </template>
 <script setup>
 
-import {useForm} from '@inertiajs/vue3'
+import {useForm, Link} from '@inertiajs/vue3'
 import FormErrorMessage from '@/Component/UI/FormErrorMessage.vue'
 
 const form = useForm({
